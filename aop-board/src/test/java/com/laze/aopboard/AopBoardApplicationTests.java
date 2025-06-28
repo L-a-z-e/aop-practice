@@ -1,13 +1,13 @@
-package com.laze.aoppractice;
+package com.laze.aopboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AopPracticeApplicationTests {
+class AopBoardApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

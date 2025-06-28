@@ -1,4 +1,4 @@
-package com.laze.aoppractice.service;
+package com.laze.aopperformancelogger;
 
 import org.springframework.stereotype.Service;
 

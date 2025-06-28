@@ -1,16 +1,15 @@
-package com.laze.aoppractice;
+package com.laze.aopperformancelogger;
 
-import com.laze.aoppractice.service.MySimpleService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class AopPracticeApplication {
+public class AopPerformanceLoggerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AopPracticeApplication.class, args);
+        SpringApplication.run(AopPerformanceLoggerApplication.class, args);
     }
 
     @Bean

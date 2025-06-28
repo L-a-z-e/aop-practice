@@ -1,4 +1,4 @@
-package com.laze.aoppractice.aop;
+package com.laze.aopperformancelogger;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PerformanceLoggerAspect {
 
-    @Pointcut("execution(public * com.laze.aoppractice.service..*.*(..))")
+    @Pointcut("execution(public * com.laze.aopperformancelogger.service..*.*(..))")
     public void serviceLayerMethods() {}
 
     @Around("serviceLayerMethods()")

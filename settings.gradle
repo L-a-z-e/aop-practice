@@ -1,1 +1,3 @@
 rootProject.name = 'aop-practice'
+include 'aop-performance-logger'
+include 'aop-board'

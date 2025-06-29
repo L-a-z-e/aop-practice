@@ -1,5 +1,6 @@
 package com.laze.aopboard.controller;
 
+import com.laze.aopboard.aop.annotation.AuthRequired;
 import com.laze.aopboard.dto.ArticleDto;
 import com.laze.aopboard.service.ArticleService;
 import jakarta.validation.Valid;
@@ -36,6 +37,7 @@ public class ArticleController {
 
     // 3. 새 게시글 생성 API
     @PostMapping
+    @AuthRequired
     public ResponseEntity<ArticleDto> createArticle(@Valid @RequestBody ArticleDto articleDto) {
         // @Valid: articleDto에 대한 유효성 검사 수행
         // @RequestBody: 요청 본문의 JSON을 ArticleDto 객체로 변환
@@ -45,6 +47,7 @@ public class ArticleController {
 
     // 4. 특정 게시글 삭제 API
     @DeleteMapping("/{id}")
+    @AuthRequired
     public ResponseEntity<Void> deleteArticle(@PathVariable Long id) {
         articleService.deleteArticle(id);
         return ResponseEntity.noContent().build(); // 204 No Content (성공적으로 처리했으나 반환할 내용 없음)
